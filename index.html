@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Most frequently used git commands" />
+  <meta name="keywords" content="git, git command, git Cheat sheet, github, repository" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Git Command Cheat sheet</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h3>Git Basics</h3>
+      <dl>
+        <dt>echo "# repo_name" >> README.md</dt>
+        <dd>Create Markdown file</dd>
+        <dt>git init</dt>
+        <dd>
+          Create empty Git repo in specified directory. Run with no arguments
+          to initialize the current directory as a git repository
+        </dd>
+        <dt>git add .</dt>
+        <dd>
+          Stage all changes for the next commit. Replace <stong>.</stong> with
+          a &lt;file&gt; to change a specific file
+        </dd>
+        <dt>git commit -m "&lt;message&gt;"</dt>
+        <dd>Commit the staged snapshot with commit message</dd>
+        <dt>
+          git remote add origin https://github.com/user-name/repo-name.git
+        </dt>
+        <dd>Create a new connection to a remote repo.</dd>
+
+        <dt>git push -u origin master</dt>
+        <dd>Push local branch to remote master repo</dd>
+        <dt>git config --global user.name "username"</dt>
+        <dd>
+          Define author name to be used for all commits in current repo. Devs
+          commonly use --global flag to set config options for current user.
+        </dd>
+        <dt>git config --global user.email "email_id@example.com"</dt>
+        <dd>
+          Define author email to be used for all commits in current repo. Devs
+          commonly use --global flag to set config options for current user.
+        </dd>
+        <dt>git pull</dt>
+        <dd>
+          Fetch the specified remote’s copy of current branch and immediately
+          merge it into the local copy
+        </dd>
+
+        <dt>git diff</dt>
+        <dd>
+          Show unstaged changes between your index and working directory.
+        </dd>
+        <dt>git status</dt>
+        <dd>List which files are staged, unstaged, and untracked.</dd>
+        <dt>git log</dt>
+        <dd>
+          Display the entire commit history using the default format. For
+          customization see additional options.
+        </dd>
+      </dl>
+    </div>
+    <div class="card">
+      <h3>Git Branches</h3>
+      <dl>
+        <dt>git branch BranchName</dt>
+        <dd>Create a new branch named BranchName without checkout.</dd>
+        <dt>git checkout -b localBranchName</dt>
+        <dd>Create and check out a new branch named localBranchName.</dd>
+
+        <dt>git checkout BranchName</dt>
+        <dd>checkout an existing branch</dd>
+        <dt>git push --set-upstream origin localBranchName</dt>
+        <dd>Push local branch to remote repository</dd>
+
+        <dt>git fetch</dt>
+        <dd>Fetch all of the branches from the repository</dd>
+        <dt>git branch -d localBranchName</dt>
+        <dd>Delete a branch named localBranchName locally</dd>
+
+        <dt>git push origin --delete remoteBranchName</dt>
+        <dd>Delete a branch named remoteBranchName from remote repository</dd>
+        <dt>git branch -m OLD-BRANCH-NAME NEW-BRANCH-NAME</dt>
+        <dd>Rename branch name</dd>
+
+        <dt>git diff FIRST-BRANCH..SECOND-BRANCH</dt>
+        <dd>Compare two branches</dd>
+        <dt>git branch -a</dt>
+        <dd>check all available branches</dd>
+      </dl>
+    </div>
+    <div class="download">
+      <a href="https://faisalcep.github.io/git-cheat-sheet/assets/Git-Cheat-sheet-Faisal_Akbar.pdf" class="btn"><i
+          class="fas fa-download 2x"></i> Download PDF</a>
+    </div>
+  </div>
+
+  <footer id="main-footer">
+    <p>
+      Created by
+      <a href="http://dsfaisal.com/" target="_blank">Faisal Akbar</a>
+    </p>
+  </footer>
+</body>
+
+</html>
